@@ -1,0 +1,19 @@
+# DH parameters for xarm7_description
+# source URDF: /home/claude/Robots/xarm7_description/xarm7_description.urdf
+# lengths in metres, angles in degrees
+# 'variable' = parameter driven by the joint (offset value shown at q=0)
+# classic (distal):  A_i = Rz(theta) Tz(d) Tx(a) Rx(alpha)
+# modified (Craig):  A_i = Rx(alpha) Tx(a) Rz(theta) Tz(d)
+# FK self-check vs URDF (max abs error over 300 random configs): classic=6.94e-16, modified=9.99e-16
+# base_transform (4x4 row-major, classic): -1,0,0,0,0,-1,0,0,0,0,1,0.267,0,0,0,1
+# tool_transform (4x4 row-major, classic): 1,0,0,0,0,1,3.84273051e-22,0,0,-5.5701261e-22,1,0,0,0,0,1
+# base_transform (4x4 row-major, modified): -1,0,0,0,0,-1,0,0,0,0,1,0.267,0,0,0,1
+# tool_transform (4x4 row-major, modified): 1,0,0,0,0,1,3.84273051e-22,0,0,-5.5701261e-22,1,0,0,0,0,1
+joint,type,variable,classic_theta_deg,classic_d_m,classic_a_m,classic_alpha_deg,modified_alpha_deg,modified_a_m,modified_d_m,modified_theta_deg
+joint1,revolute,theta,0.000000,0.000000,0.000000,90.000210,-0.000000,0.000000,0.000000,-0.000000
+joint2,revolute,theta,180.000000,0.000001,0.000000,90.000210,90.000210,0.000000,0.000001,-180.000000
+joint3,revolute,theta,0.000000,0.293000,0.052500,90.000210,90.000210,0.000000,0.293000,-0.000000
+joint4,revolute,theta,0.000000,0.000001,0.077500,90.000210,90.000210,0.052500,0.000001,-0.000000
+joint5,revolute,theta,0.000000,0.342500,0.000000,90.000210,90.000210,0.077500,0.342500,-0.000000
+joint6,revolute,theta,0.000000,0.000000,0.076000,-90.000210,90.000210,0.000000,0.000000,-0.000000
+joint7,revolute,theta,0.000000,0.097000,0.000000,0.000000,-90.000210,0.076000,0.097000,-0.000000
